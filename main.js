@@ -1,6 +1,8 @@
 // ♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~SETUP~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~
 // ♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~
 
+// Both an animation and a mouseMove program
+
 // global variables ~~~~~
 var canvas = document.querySelector('canvas');
 var ctx = canvas.getContext('2d');
@@ -19,6 +21,7 @@ function updateMouseXY(eve){
 }
 
 // events ~~~~~
+// The resizeCanvas function does not seem to be working as I expected
 window.addEventListener('resize', resizeCanvas);
 window.addEventListener('mousemove', updateMouseXY);
 
@@ -28,6 +31,10 @@ resizeCanvas();
 // ♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~DRAW~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~
 // ♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~♥‿♥~
 
+// Here I copy+pasted my code over and over again
+// There must be an easier way - for loop?
+// Could not figure out any other way
+// Alternates between images animating and mouseMove function
 // Animation 1
 setTimeout(function draw() {
   var canvas = document.getElementById('canvas');
